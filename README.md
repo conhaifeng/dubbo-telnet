@@ -20,5 +20,10 @@ du = Dubbo(ip, port)
 interface = 'com.test.shared.service.MyService'
 method = 'getById'
 id = '00001'
-json_data = du.invoke_service(interface,method, id=id)
+name = 'my_name'
+json_data = du.invoke_service(interface,method, id=id, name=name)
+```
+if method no arguments, call like this:
+```python
+json_data = du.invoke_service(interface,method)
 ```
