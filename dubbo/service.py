@@ -15,8 +15,8 @@ class Dubbo(object):
     PROVIDER = 'PROVIDER:'
     PRMPOT = "dubbo>"
 
-    def __init__(self, server_ip=config.SERVER_IP, server_port=config.SERVER_PORT):
-        self._invoker = Invoker(server_ip, server_port)
+    def __init__(self, server_ip=config.SERVER_IP, server_port=config.SERVER_PORT, keep_alive=False):
+        self._invoker = Invoker(server_ip, server_port, keep_alive)
 
     def list_service(self, interface_name=''):
         """
